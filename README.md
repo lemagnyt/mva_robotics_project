@@ -59,7 +59,7 @@ mva_robotics_project/
 This project works with **Python 3.13.9** (other versions untested):
 
 ```bash
-# Clone the repository
+# Clone the repository with its submodules
 git clone --recurse-submodules https://github.com/lemagnyt/mva_robotics_project.git
 cd mva_robotics_project
 
