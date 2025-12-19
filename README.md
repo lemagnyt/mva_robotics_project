@@ -1,4 +1,4 @@
-# Robotics MVA Project
+# MVA Robotics Project
 
 This project implements a **robust recovery controller** for a quadrupedal robot, inspired by the paper:
 
@@ -13,7 +13,7 @@ The goal is to enable a quadrupedal robot (ANYmal) to **stand up from any fallen
 ## Project Structure
 
 ```
-robotics_mva_project/
+mva_robotics_project/
 ├── mujoco_menagerie/       # Submodule from Google DeepMind to load different robot models (we use anymal_b)
 ├── utils/
 │   ├── robot_loader.py     # Class to load a robot model
@@ -60,8 +60,8 @@ This project works with **Python 3.13.9** (other versions untested):
 
 ```bash
 # Clone the repository
-git clone https://github.com/lemagnyt/robotics_mva_project.git
-cd robotics_mva_project
+git clone https://github.com/lemagnyt/mva_robotics_project.git
+cd mva_robotics_project
 
 # Install dependencies
 pip install -r requirements.txt
