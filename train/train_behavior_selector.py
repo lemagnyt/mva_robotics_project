@@ -73,20 +73,19 @@ class HeightEstimatorCallback(BaseCallback):
         self.warmup_steps = warmup_steps
 
     def _on_step(self) -> bool:
-        # Accès à l'environnement réel
         env = self.training_env.envs[0].unwrapped
 
-        # Récupération de l'observation et de la vraie hauteur
+        # Retrieve current observation and true height
         ht, estimator_obs = env.get_estimator_observation()
 
-        # Stockage dans le replay buffer
+        # Store in replay memory
         self.memory.push(estimator_obs, ht)
 
-        # Warm-up: pas d'apprentissage
+        # Warm-up
         if self.num_timesteps < self.warmup_steps:
             return True
 
-        # Entraînement off-policy
+        # Train Height Estimator
         if len(self.memory) >= self.batch_size:
             states, heights = self.memory.sample(self.batch_size)
 
