@@ -60,7 +60,7 @@ This project works with **Python 3.13.9** (other versions untested):
 
 ```bash
 # Clone the repository
-git clone https://github.com/lemagnyt/mva_robotics_project.git
+git clone --recurse-submodules https://github.com/lemagnyt/mva_robotics_project.git
 cd mva_robotics_project
 
 # Install dependencies
